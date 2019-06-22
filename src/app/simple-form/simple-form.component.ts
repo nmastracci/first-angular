@@ -5,19 +5,27 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
     <div>
       <p>Simple Form</p>
-      <input #myInput type="text" />
+      <input #myInput type="text" [(ngModel)]="typedout" />
       <button (click)="onClick($event, myInput.value)">PRESS ME</button>
       <div>
+        <p>answer:</p>
         {{ speak }}
+        <p>answer:</p>
+        {{ typedout }}
       </div>
     </div>
   `,
   styles: []
 })
+
+// Learning Notes:
+// In angular, parens represent events and square brackets represent machine values
+// therefore the combination of both is like two-way binding
 export class SimpleFormComponent implements OnInit {
   constructor() {}
 
   @Input() speak;
+  @Input() typedout;
 
   ngOnInit() {}
 

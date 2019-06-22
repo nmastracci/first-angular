@@ -19,7 +19,14 @@ import { Component, Inject } from '@angular/core';
       </ul>
     </div>
   `,
-  styleUrls: ['./app.component.scss']
+  // styleUrls: ['./app.component.scss']
+  styles: [
+    `
+      app-simple-form {
+        color: blue;
+      }
+    `
+  ]
 })
 export class AppComponent {
   constructor(

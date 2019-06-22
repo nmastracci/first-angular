@@ -3,14 +3,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-simple-form',
   template: `
+    <p>Simple Form</p>
+    <input #myInput type="text" [(ngModel)]="speak" />
+    <button (click)="update.emit({ text: speak })">PRESS ME</button>
     <div>
-      <p>Simple Form</p>
-      <input #myInput type="text" [(ngModel)]="speak" />
-      <button (click)="update.emit({ text: speak })">PRESS ME</button>
-      <div>
-        <p>answer:</p>
-        {{ speak }}
-      </div>
+      <p>answer:</p>
+      {{ speak }}
     </div>
   `,
   styles: []

@@ -11,12 +11,31 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       {{ speak }}
     </div>
   `,
-  styles: []
+  styles: [
+    `
+      :host {
+        display: block;
+        //display:flex;
+      }
+      * {
+        font-family: helvetica;
+      }
+      input:focus {
+        font-weight: bold;
+        border: 1px solid blue;
+        border-radius: 4px;
+      }
+    `
+  ]
 })
 
 // Learning Notes:
 // In angular, parens represent events and square brackets represent machine values
 // therefore the combination of both is like two-way binding
+
+// STYLES
+// host is referring to the app-simple-form component which does not require a conatining div
+// *{} selects everything inside the component!
 export class SimpleFormComponent implements OnInit {
   constructor() {}
 

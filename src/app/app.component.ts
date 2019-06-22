@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MailService } from './mail.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-angular';
+  constructor(
+    @Inject('mailagain') private mailagain,
+    private mail: MailService,
+    @Inject('pokeapi') private pokeapi
+  ) {}
 }

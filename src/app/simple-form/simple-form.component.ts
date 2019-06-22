@@ -5,13 +5,13 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
     <div>
       <p>Simple Form</p>
-      <input #myInput type="text" [(ngModel)]="typedout" />
+      <input #myInput type="text" [(ngModel)]="message" />
       <button (click)="onClick($event, myInput.value)">PRESS ME</button>
       <div>
         <p>answer:</p>
         {{ speak }}
         <p>answer:</p>
-        {{ typedout }}
+        {{ message }}
       </div>
     </div>
   `,
@@ -24,6 +24,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SimpleFormComponent implements OnInit {
   constructor() {}
 
+  @Input() message;
   @Input() speak;
   @Input() typedout;
 

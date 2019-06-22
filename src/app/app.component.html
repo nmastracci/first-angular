@@ -4,11 +4,9 @@
 </div>
 <h2>Here are some links to help you start:</h2>
 <app-simple-form></app-simple-form>
-{{ mail.message }}
-{{ mailagain.something }}
 
 <ul>
-  <li *ngFor="let message of mail.messages">{{ message }}</li>
+  <li *ngFor="let message of messages; let i = index">{{ i }}{{ message }}</li>
 </ul>
 
 <router-outlet></router-outlet>

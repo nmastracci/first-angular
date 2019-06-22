@@ -3,7 +3,15 @@ import { MailService } from './mail.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <div>
+      <ul>
+        <li *ngFor="let message of mailagain.somethings; let i = index">
+          {{ i }}{{ message }}
+        </li>
+      </ul>
+    </div>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {

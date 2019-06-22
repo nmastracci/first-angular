@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MailagainService {
-  something = `there's so much mail!`;
+  somethings = [`there's so much mail!`, `You should check your mail`];
 
   constructor() {}
 }

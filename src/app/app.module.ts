@@ -10,8 +10,8 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
   declarations: [AppComponent, SimpleFormComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
-    MailService,
     { provide: 'mailagain', useClass: MailagainService },
+    { provide: 'mail', useClass: MailService },
     { provide: 'pokeapi', useValue: 'https://pokeapi.co/api/v2/' }
   ],
   bootstrap: [AppComponent]

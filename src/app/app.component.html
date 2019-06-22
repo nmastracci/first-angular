@@ -6,7 +6,9 @@
 <app-simple-form></app-simple-form>
 
 <ul>
-  <li *ngFor="let message of messages; let i = index">{{ i }}{{ message }}</li>
+  <li *ngFor="let message of mail.messages; let i = index">
+    {{ i }}{{ message }}
+  </li>
 </ul>
 
 <router-outlet></router-outlet>

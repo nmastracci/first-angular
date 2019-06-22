@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
       <input #myInput type="text" />
       <button (click)="onClick($event, myInput.value)">PRESS ME</button>
       <div>
-        {{ message }}
+        {{ speak }}
       </div>
     </div>
   `,
@@ -17,7 +17,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SimpleFormComponent implements OnInit {
   constructor() {}
 
-  @Input() message;
+  @Input() speak;
 
   ngOnInit() {}
 

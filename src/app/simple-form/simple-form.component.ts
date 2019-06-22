@@ -1,17 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-simple-form',
   template: `
     <div>
       <p>Simple Form</p>
-      <input #myInput type="text" [(ngModel)]="message" />
-      <button (click)="onClick($event, myInput.value)">PRESS ME</button>
+      <input #myInput type="text" [(ngModel)]="speak" />
+      <button (click)="update.emit({ text: speak })">PRESS ME</button>
       <div>
         <p>answer:</p>
         {{ speak }}
-        <p>answer:</p>
-        {{ message }}
       </div>
     </div>
   `,
@@ -24,9 +22,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SimpleFormComponent implements OnInit {
   constructor() {}
 
-  @Input() message;
   @Input() speak;
-  @Input() typedout;
+
+  @Output() update = new EventEmitter();
 
   ngOnInit() {}
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-simple-form',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
       <p>Simple Form</p>
       <input #myInput type="text" />
       <button (click)="onClick($event, myInput.value)">PRESS ME</button>
+      <div>
+        {{ message }}
+      </div>
     </div>
   `,
   styles: []
 })
 export class SimpleFormComponent implements OnInit {
   constructor() {}
+
+  @Input() message;
 
   ngOnInit() {}
 

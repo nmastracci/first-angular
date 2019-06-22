@@ -13,6 +13,7 @@ import { Component, Inject } from '@angular/core';
       <ul>
         <app-simple-form
           *ngFor="let message of mailagain.somethings"
+          [message]="message"
         ></app-simple-form>
       </ul>
     </div>

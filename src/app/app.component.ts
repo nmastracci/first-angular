@@ -7,7 +7,6 @@ import { MailService } from './mail.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'first-angular';
   constructor(
     @Inject('mailagain') private mailagain,
     private mail: MailService,
